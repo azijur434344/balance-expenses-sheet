@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+    <link rel="stylesheet" href="syle.css">
+</head>
+
+<body>
+    
+    <!-- <h1>balance Sheet Statement </h1> -->
+    <div class="mainContainer">
+        <div class="ImageContainer">
+            <img class="img1" src="/images/Monthly-Expenses.jpg" alt="">
+        </div>
+        <div class="FormContainer">
+            <h1 class="income">Balance Statement</h1>
+            <div  class="input_group">
+                <label class="input_label">Income : </label>
+                <input id="input" class="input_field" type="text">
+            </div>
+            
+
+                    <div id="foralert">
+                        <h1  class="title">Expenses Sheet</h1>
+            <div class="input_group">
+                <label class="input_label">Food Cost : </label>
+                <input id="input1" class="input_field" type="text">
+            </div>
+            <div class="input_group">
+                <label class="input_label">Clothes : </label>
+                <input id="input2" class="input_field" type="text">
+            </div>
+            <div class="input_group">
+                <label class="input_label">house Rent : </label>
+                <input id="input3" class="input_field" type="text">
+            </div>
+            <div class="calc_section">
+                <button id="calid" class="calc">Calculate</button>
+            </div>
+            <p class="expanse_text"> <span id="totalexpenses">Total Expenses : 00</span></p>
+            <p class="expanse_text"> <span id="totalbalance">Balance : 00</span> </p>
+                    </div>
+
+
+
+            <div class="seving_section">
+                <p>Save:</p>
+                <input type="number" id="saveinput" />
+                <p>%</p>
+                <button id="savebtn">Save</button>
+            </div>
+            <p class="expanse_text"> <span id="savingamount">Saving amount : 00</span> </p>
+            <p class="expanse_text"> <span id="remainingbalance">Remaining balance : 00</span> </p>
+        </div>
+    </div>
+    <script>      
+  calid.addEventListener("click", function() {
+        var incomeinput = document.getElementById('input').value ;
+        const income = parseFloat(incomeinput);
+        var foodcostinput = document.getElementById('input1').value;
+        var foodcost = parseFloat(foodcostinput);
+        var clothesinput = document.getElementById('input2').value;
+        var clothes = parseFloat(clothesinput);
+        var houserentinput = document.getElementById('input3').value; 
+        var houserent = parseFloat(houserentinput);
+var totalexpenses1 = document.getElementById("totalexpenses").innerText;
+var totalexpenses = parseFloat(totalexpenses1);
+var totalbalance1 = document.getElementById("totalbalance").innerText;
+var totalbalance = parseFloat(totalbalance1);
+var totalexpenses = foodcost + clothes + houserent ;
+var expensesresult = document.getElementById("totalexpenses").innerText = totalexpenses;
+var addbalance = income - expensesresult;
+var balanceresult = document.getElementById("totalbalance").innerText = addbalance;
+
+var alertmsg = document.getElementById("input").value;
+if(alertmsg === ""){
+    alert("sorry Fill-up your all input form &  Monthly Saving form");
+}
+
+var alertsms = document.getElementById('input').value;
+if (alertsms < 0 ){
+    alert("its negative value type Possitive value");
+}
+
+
+
+var expensesalert = document.getElementById("totalexpenses").value;
+if (expensesresult > incomeinput ) {
+    alert("Expenses more then Income so its not accepted");
+}
+
+        });
+
+
+
+savebtn.addEventListener('click', function() {
+    var totalbalance1 = document.getElementById("totalbalance").innerText;
+var totalbalance = parseFloat(totalbalance1);
+
+
+    var saveinput1 = document.getElementById("saveinput").value;
+    var saveinput = parseFloat(saveinput1);
+    var savingamount1 = document.getElementById("savingamount").value;
+    var savingamount = parseFloat(savingamount1);
+    var remainingbalance1 = document.getElementById("remainingbalance").value;
+    var remainingbalance = parseFloat(remainingbalance1);
+    const savingpercentage = document.getElementById("saveinput").value ;
+
+    const savingbalance = (savingpercentage / 100) * totalbalance ;
+    var savingamount = document.getElementById("savingamount").innerText = savingbalance;
+    var remainingbalance = totalbalance - savingamount ;
+    var Remainingresult = document.getElementById("remainingbalance").innerText = remainingbalance ;
+    
+});
+    </script> 
+</body>
+
+</html>

@@ -1,0 +1,84 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    outline: 0;
+}
+
+.mainContainer {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    padding: 40px;
+
+}
+
+.img1 {
+    text-align: center;
+    justify-items: center;
+   padding-left: 100px;
+    width: 550px;
+    margin-top: 100px;
+    height: 400px;
+}
+
+.ImageContainer {
+
+    width: 50%;
+}
+
+.FormContainer {
+    border-radius: 10px ;
+    background-color: rgb(211, 96, 226);
+    width: 50%;
+    padding: 30px;
+}
+.title {
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+.income {
+    padding: 10px;
+    margin-bottom: 10px;
+    justify-items: center;
+    text-align: center;
+}
+
+.input_group {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.input_label {
+    width: 180px;
+}
+
+.input_field {
+    width: calc(100% - 180px);
+}
+
+.calc_section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+.calc {
+    width: 120px;
+}
+
+.expanse_text {
+    text-align: center;
+    margin-bottom: 15px;
+    display: block;
+}
+
+.seving_section {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
